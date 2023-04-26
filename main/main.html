@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    
+    var mytable = "<table class=main cellpadding=\"0\" cellspacing=\"0\"><tbody><tr>";
+    var myValue = [41,18,21,63,2,53,5,57,60,93,28,3,90,39,80,88,49,60,26,28];
+
+    mytable += "</tr><th class=Lefthead>Idex #</th><th = RightHead>Value</th><tr>";
+
+for (var i = 1; i < 21; i++) {
+
+mytable += "</tr><tr>";
+mytable += "<td class=LeftColumn>" + "A" + i + "</td>";
+mytable += "<td class=RightColumn id = A" + i + ">" + myValue[i - 1] + "</td>";
+
+}
+
+mytable += "</tr></tbody></table>";
+
+document.write(mytable)
+
+var mytable2 = "<table class=result cellpadding=\"0\" cellspacing=\"0\"><tbody><tr>";
+var addVal = parseInt(document.getElementById('A5').textContent) + parseInt(document.getElementById('A20').textContent);
+var divVal = parseInt(document.getElementById('A15').textContent) / parseInt(document.getElementById('A7').textContent);
+var mulVal = parseInt(document.getElementById('A13').textContent) * parseInt(document.getElementById('A12').textContent);
+
+mytable2 += "</tr><th class=Lefthead2>Category</th><th class=Righthead2>Value</th><tr>"
+mytable2 += "</tr><tr>";
+mytable2 += "<td class=LeftColumn2>" + "Alpha" + "</td>";
+mytable2 += "<td class=RightColumn2>" + addVal + "</td>";
+
+mytable2 += "</tr><tr>";
+mytable2 += "<td class=LeftColumn2>" + "Beta" + "</td>";
+mytable2 += "<td class=RightColumn2>" + divVal + "</td>";
+
+mytable2 += "</tr><tr>";
+mytable2 += "<td class=LeftColumn2>" + "Charlie" + "</td>";
+mytable2 += "<td class=RightColumn2>" + mulVal + "</td>";
+
+document.write(mytable2)
+
+
+</script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="display.css">
+    </head>
+</html>
